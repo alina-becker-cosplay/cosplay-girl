@@ -297,41 +297,76 @@ body {
   }
 }
 
-/* ===============================
-   RELATED ALBUMS
-================================ */
+/* ================= RELATED ALBUMS ================= */
 .related-albums {
-  max-width: 900px;
-  margin: 0 auto 50px;
-  padding: 0 14px;
+  max-width: 1200px;
+  margin: 40px auto 20px;
+  padding: 0 15px;
 }
 
-.related-albums h2 {
-  font-size: 1.3rem;
-  color: var(--sky);
-  margin-bottom: 12px;
+.related-albums h3 {
+  font-size: 1.4rem;
+  color: #77c8ff;
+  margin-bottom: 15px;
+  border-left: 4px solid #009dff;
+  padding-left: 10px;
 }
 
-.related-albums ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.related-grid {
+  display: grid;
+  gap: 14px;
 }
 
-.related-albums li {
-  margin-bottom: 10px;
+/* Desktop */
+@media (min-width: 1024px) {
+  .related-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
-.related-albums a {
-  color: var(--sky-soft);
-  font-size: 0.95rem;
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .related-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .related-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.related-card {
+  display: block;
+  background: #0f1822;
+  border-radius: 10px;
+  overflow: hidden;
   text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.related-albums a:hover {
-  color: var(--sky);
-  text-decoration: underline;
+.related-card img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  display: block;
 }
+
+.related-card span {
+  display: block;
+  padding: 8px;
+  font-size: 0.95rem;
+  color: #e6f7ff;
+  text-align: center;
+}
+
+.related-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 15px rgba(119, 200, 255, 0.6);
+}
+
 
 /* ===============================
    LIGHTBOX

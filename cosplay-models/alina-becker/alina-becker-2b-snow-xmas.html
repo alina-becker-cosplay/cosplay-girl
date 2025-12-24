@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+
+  <link rel="icon" type="image/png" sizes="192x192" href="../favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../favicon/android-chrome-512x512.png">
+
+  <link rel="shortcut icon" href="../favicon/favicon.ico">
+
+  <title>2B Snow Christmas Cosplay Album | Alina Becker Gallery</title>
+
+  <meta name="description"
+    content="Explore Alina Becker’s 2B Snow Christmas cosplay album featuring festive winter aesthetics, exclusive portraits, and cinematic visuals.">
+
+  <style>
+    /* ===============================
+   ROOT & GLOBAL
+================================ */
+    :root {
+      --bg-main: #0a0f14;
+      --bg-card: #0f1b26;
+      --bg-nav: #071018;
+      --sky: #77c8ff;
+      --sky-soft: #9edcff;
+      --sky-dark: #009dff;
+      --text-main: #ffffff;
+      --text-muted: #bcdcff;
+      --radius-lg: 16px;
+      --radius-md: 10px;
+      --radius-sm: 6px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Poppins", system-ui, sans-serif;
+      background: radial-gradient(circle at top, #0c1622, #05080c);
+      color: var(--text-main);
+    }
+
+    /* ===============================
+   LARGE BACK BUTTON
+================================ */
+    .back-btn {
+      display: inline-block;
+      margin: 16px;
+      padding: 12px 18px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #001019;
+      background: linear-gradient(135deg, var(--sky), var(--sky-dark));
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      box-shadow: 0 10px 25px rgba(0, 157, 255, 0.35);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .back-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 35px rgba(0, 157, 255, 0.55);
+    }
+
+    /* ===============================
+   HERO VIDEO SECTION
+================================ */
+    /* ===============================
+   FAKE VIDEO HERO
+================================ */
+    .fake-video {
+      position: relative;
+      max-width: 1150px;
+      height: 380px;
+      margin: 16px auto 35px;
+      border-radius: 18px;
+      overflow: hidden;
+      display: block;
+      text-decoration: none;
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.9);
+    }
+
+    /* Background image */
+    .fake-video img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Dark overlay */
+    .fake-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top,
+          rgba(5, 12, 22, 0.9),
+          rgba(5, 12, 22, 0.4),
+          rgba(5, 12, 22, 0.15));
+    }
+
+    /* Text + button container */
+    .fake-content {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 28px;
+      z-index: 2;
+    }
+
+    /* Title */
+    .fake-content h1 {
+      margin: 0;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #77c8ff;
+      letter-spacing: 0.5px;
+    }
+
+    /* Subtitle */
+    .fake-content p {
+      margin-top: 6px;
+      font-size: 1.05rem;
+      color: #bcdcff;
+      max-width: 520px;
+    }
+
+    /* Play Button */
+    .play-btn {
+      margin-top: 16px;
+
+      width: 78px;
+      height: 78px;
+      min-width: 78px;
+      min-height: 78px;
+
+      aspect-ratio: 1 / 1;
+      /* ⭐ FORCE CIRCLE */
+      border-radius: 50%;
+
+      background: radial-gradient(circle, #77c8ff, #009dff);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 30px;
+      color: #001018;
+
+      box-shadow: 0 0 35px rgba(0, 157, 255, 0.7);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+
+    /* Hover effect */
+    .fake-video:hover .play-btn {
+      transform: scale(1.12);
+      box-shadow: 0 0 55px rgba(0, 157, 255, 1);
+    }
+
+    /* ===============================
+   MOBILE FIX
+================================ */
+    @media (max-width: 767px) {
+      .fake-video {
+        height: 240px;
+      }
+
+      .fake-content h1 {
+        font-size: 1.6rem;
+      }
+
+      .fake-content p {
+        font-size: 0.9rem;
+      }
+
+      .play-btn {
+        width: 60px;
+        height: 60px;
+        font-size: 22px;
+      }
+    }
+
+
+    /* Overlay */
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top,
+          rgba(5, 10, 18, 0.9),
+          rgba(5, 10, 18, 0.4),
+          rgba(5, 10, 18, 0.1));
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 26px;
+    }
+
+    .hero-overlay h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      color: var(--sky);
+      letter-spacing: 0.5px;
+    }
+
+    .hero-overlay p {
+      margin-top: 6px;
+      font-size: 1rem;
+      color: var(--text-muted);
+    }
+
+    /* ===============================
+   DESCRIPTION SECTION
+================================ */
+    .album-desc {
+      max-width: 900px;
+      margin: 0 auto 28px;
+      padding: 0 14px;
+    }
+
+    .album-desc h2 {
+      font-size: 1.4rem;
+      color: var(--sky);
+      margin-bottom: 8px;
+    }
+
+    .album-desc p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+    }
+
+    .album-desc a {
+      color: var(--sky-soft);
+      text-decoration: underline;
+    }
+
+    .album-desc a:hover {
+      color: var(--sky);
+    }
+
+    /* ===============================
+   IMAGE GRID
+================================ */
+    .album-container {
+      max-width: 1300px;
+      margin: 0 auto 40px;
+      padding: 0 12px;
+      display: grid;
+      gap: 12px;
+    }
+
+    /* Desktop */
+    @media (min-width: 1024px) {
+      .album-container {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    /* Tablet */
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .album-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 767px) {
+      .album-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* ===============================
+   IMAGE CARD
+================================ */
+    .photo-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius-md);
+      background: var(--bg-card);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .photo-card:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 18px 40px rgba(0, 157, 255, 0.45);
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Aspect ratios */
+    @media (max-width: 767px) {
+      .photo-card {
+        aspect-ratio: 3 / 4;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .photo-card {
+        aspect-ratio: 2 / 3;
+      }
+    }
+
+    /* ================= RELATED ALBUMS ================= */
+    .related-albums {
+      max-width: 1200px;
+      margin: 40px auto 20px;
+      padding: 0 15px;
+    }
+
+    .related-albums h3 {
+      font-size: 1.4rem;
+      color: #77c8ff;
+      margin-bottom: 15px;
+      border-left: 4px solid #009dff;
+      padding-left: 10px;
+    }
+
+    .related-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    /* Desktop */
+    @media (min-width: 1024px) {
+      .related-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    /* Tablet */
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .related-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 767px) {
+      .related-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .related-card {
+      display: block;
+      background: #0f1822;
+      border-radius: 10px;
+      overflow: hidden;
+      text-decoration: none;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .related-card img {
+      width: 100%;
+      aspect-ratio: 2 / 3;
+      object-fit: cover;
+      display: block;
+    }
+
+    .related-card span {
+      display: block;
+      padding: 8px;
+      font-size: 0.95rem;
+      color: #e6f7ff;
+      text-align: center;
+    }
+
+    .related-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 15px rgba(119, 200, 255, 0.6);
+    }
+
+
+    /* ===============================
+   LIGHTBOX
+================================ */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(3, 8, 15, 0.9);
+      backdrop-filter: blur(6px);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-img {
+      max-width: 92%;
+      max-height: 92%;
+      border-radius: var(--radius-md);
+      box-shadow: 0 0 40px rgba(0, 157, 255, 0.6);
+    }
+
+    /* Close */
+    .close {
+      position: absolute;
+      top: 18px;
+      right: 26px;
+      font-size: 34px;
+      color: var(--sky);
+      cursor: pointer;
+    }
+
+    /* Arrows */
+    .prev,
+    .next {
+      position: absolute;
+      top: 50%;
+      font-size: 42px;
+      color: var(--sky);
+      cursor: pointer;
+      transform: translateY(-50%);
+      padding: 10px;
+    }
+
+    .prev {
+      left: 20px;
+    }
+
+    .next {
+      right: 20px;
+    }
+
+    /* ===============================
+   MOBILE HERO FIX
+================================ */
+    @media (max-width: 767px) {
+      .hero-video video {
+        height: 240px;
+      }
+
+      .hero-overlay h1 {
+        font-size: 1.5rem;
+      }
+
+      .hero-overlay p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- ================= NAV ================= -->
+  <nav class="top-nav">
+    <a href="../index.html" class="back-btn">⟵ Back</a>
+    <h2>2B Snow Christmas Album</h2>
+  </nav>
+
+  <!-- ================= FAKE VIDEO HERO ================= -->
+  <a href="https://www.effectivegatecpm.com/m7gcpumi?key=957bd15b45ab78df72b863909f6bc8d4" class="fake-video"
+    aria-label="Watch Alina Becker 2B Snow Christmas Video">
+
+    <img src="images/alina-becker-2b-snow-xmas-1.jpg"
+      alt="Alina Becker 2B Snow Christmas cosplay video preview" loading="eager">
+
+    <div class="fake-overlay"></div>
+
+    <div class="fake-content">
+      <h1>2B Snow Christmas</h1>
+      <p>Exclusive winter cosplay gallery by Alina Becker</p>
+      <div class="play-btn">▶</div>
+    </div>
+
+  </a>
+
+  <!-- ================= DESCRIPTION ================= -->
+  <section class="album-desc">
+    Discover Alina Becker’s exclusive <strong>2B Snow Christmas</strong> cosplay photoshoot,
+    blending festive winter vibes with high-quality portrait photography.
+    Browse the full gallery below and explore more cosplay albums from our collection.
+    <a href="alina-becker-chel-the-road-to-el-dorado.html">Chel the Road to El Dorado cosplay</a>
+    and
+    <a href="alina-becker-tifa-stringkini.html">Tifa Stringkini cosplay gallery</a>.
+  </section>
+
+  <!-- ================= IMAGE GRID ================= -->
+  <main class="album-container">
+
+    <!-- Example image (keep rest SAME PATTERN) -->
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-1.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 1" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-2.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 2" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-3.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 3" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-4.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 4" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-5.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 5" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-6.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 6" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-7.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 7" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-8.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 8" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-9.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 9" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-10.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 10" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-11.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 11" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-12.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 12" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-13.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 13" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-14.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 14" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-15.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 15" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-16.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 16" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-17.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 17" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-18.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 18" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-19.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 19" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-20.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 20" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-21.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 21" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-22.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 22" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-23.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 23" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-24.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 24" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-25.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 25" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-26.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 26" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-27.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 27" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-28.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 28" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-29.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 29" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-30.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 30" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-31.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 31" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-32.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 32" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-33.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 33" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-34.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 34" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-35.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 35" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-36.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 36" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-37.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 37" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-38.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 38" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-39.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 39" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-40.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 40" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-41.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 41" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-42.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 42" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-43.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 43" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-44.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 44" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-45.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 45" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-46.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 46" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-47.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 47" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-48.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 48" loading="lazy">
+    </div>
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-49.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 49" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-50.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 50" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-51.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 51" loading="lazy">
+    </div>
+    <div class="photo-card">
+      <img src="images/alina-becker-2b-snow-xmas-52.jpg"
+        alt="Alina Becker 2B Snow Christmas cosplay photo 52" loading="lazy">
+    </div>
+
+    <!-- ⚠️ KEEP ALL YOUR OTHER IMAGES EXACTLY SAME,
+         just update alt text gradually for SEO -->
+
+  </main>
+
+  <!-- ================= RELATED ALBUMS ================= -->
+  <section class="related-albums">
+
+    <h3>Related Cosplay Albums</h3>
+
+    <div class="related-grid">
+
+      <a href="alina-becker-tifa-stringkini.html" class="related-card">
+        <img src="images/alina-becker-tifa-stringkini-poster.jpg" alt="Alina Becker Tifa Stringkini cosplay album">
+        <span>Tifa Stringkini</span>
+      </a>
+
+      <a href="alina-becker-stocking-anarchy.html" class="related-card">
+        <img src="images/alina-becker-stocking-anarchy-poster.jpg" alt="Alina Becker Stocking Anarchy cosplay album">
+        <span>Stocking Anarchy</span>
+      </a>
+
+      <a href="alina-becker-frieren.html" class="related-card">
+        <img src="images/alina-becker-frieren-poster.jpg" alt="Alina Becker Frieren cosplay album">
+        <span>Frieren Fantasy</span>
+      </a>
+
+      <a href="alina-becker-nami.html" class="related-card">
+        <img src="images/alina-becker-chel-the-road-to-el-dorado-poster.jpg"
+          alt="Alina Becker Chel The Road to El Dorado cosplay album">
+        <span>Chel The Road to El Dorado</span>
+      </a>
+
+    </div>
+  </section>
+
+
+  <!-- ================= LIGHTBOX ================= -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" class="lightbox-img" alt="Expanded cosplay image">
+    <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+    <span class="next" onclick="changeImage(1)">&#10095;</span>
+  </div>
+
+  <script>
+    let currentIndex = 0;
+    let images = [];
+
+    // Prepare image list
+    window.onload = () => {
+      images = [...document.querySelectorAll(".photo-card img")].map(img => img.src);
+      showPage(1); // existing pagination init
+    };
+
+    // When an image is clicked
+    document.addEventListener("click", function (e) {
+      if (e.target.matches(".photo-card img")) {
+        currentIndex = images.indexOf(e.target.src);
+        openLightbox(currentIndex);
+      }
+    });
+
+    function openLightbox(index) {
+      document.getElementById("lightbox").style.display = "flex";
+      document.getElementById("lightbox-img").src = images[index];
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+
+    // Next / Prev
+    function changeImage(direction) {
+      currentIndex += direction;
+      if (currentIndex < 0) currentIndex = images.length - 1;
+      if (currentIndex >= images.length) currentIndex = 0;
+      openLightbox(currentIndex);
+    }
+
+    /* ------- Mobile Swipe Support -------- */
+    let startX = 0;
+
+    document.getElementById("lightbox").addEventListener("touchstart", (e) => {
+      startX = e.touches[0].clientX;
+    });
+
+    document.getElementById("lightbox").addEventListener("touchend", (e) => {
+      let endX = e.changedTouches[0].clientX;
+      let diff = endX - startX;
+
+      if (diff > 50) changeImage(-1);   // swipe right
+      if (diff < -50) changeImage(1);   // swipe left
+    });
+
+  </script>
+
+</body>
+
+</html>
